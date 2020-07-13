@@ -1,0 +1,23 @@
+include ../utils/mixins
+include ../../../node_modules/bemto.pug/bemto
+
+- set_bemto_settings({ modifier: "--" })
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+    block head
+
+  body(class=pageClass)
+    .wrapper
+      #app
+        include ../includes/blocks/header
+        .content-wrapper
+          block content
+        include ../includes/blocks/footer
+
+    block script

@@ -1,0 +1,17 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+
+.content-width {
+  width: 1120px;
+  margin: 0 auto;
+
+  @media (max-width: 1023px) {
+    width: 80%;
+  }
+
+  @media (max-width: 767px) {
+    width: 90%;
+  }
+}
